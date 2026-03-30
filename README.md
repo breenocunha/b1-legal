@@ -2,9 +2,23 @@
 
 Site estático com a **Política de Privacidade** e os **Termos de Uso** do aplicativo **B1 TechFrio**, desenvolvido pela B1 Soluções Integradas Ltda.
 
-## Publicação (GitHub Pages)
+## Publicação (Netlify)
 
-Após o deploy na branch `main`, o site fica disponível em:
+Site em produção:
+
+| | URL |
+|---|-----|
+| Página inicial | https://b1-legal.netlify.app/ |
+| Política de Privacidade | https://b1-legal.netlify.app/privacy |
+| Termos de Uso | https://b1-legal.netlify.app/terms |
+
+**Google Play:** use como URL da política de privacidade:
+
+**https://b1-legal.netlify.app/privacy**
+
+(Os caminhos `/privacy` e `/terms` são definidos em `netlify.toml`.)
+
+## Espelho (GitHub Pages)
 
 | | URL |
 |---|-----|
@@ -12,15 +26,14 @@ Após o deploy na branch `main`, o site fica disponível em:
 | Política de Privacidade | https://breenocunha.github.io/b1-legal/privacy.html |
 | Termos de Uso | https://breenocunha.github.io/b1-legal/terms.html |
 
-Na Google Play, use a URL da **Política de Privacidade** acima no cadastro do app.
-
 ## Conteúdo do repositório
 
 - `index.html` — índice com links para os documentos
 - `privacy.html` — política de privacidade (LGPD)
 - `terms.html` — termos de uso
-- `.nojekyll` — desativa o Jekyll no GitHub Pages para servir HTML estático sem alterações
+- `netlify.toml` — rewrites para `/privacy` e `/terms`
+- `.nojekyll` — desativa o Jekyll no GitHub Pages
 
 ## Atualizar os textos
 
-Edite os arquivos `.html`, faça commit e push para `main`. O GitHub Pages atualiza em alguns minutos.
+Edite os `.html`, faça commit e push. O Netlify e o GitHub Pages passam a servir a nova versão em poucos minutos. Quando alterar o conteúdo jurídico, atualize também a linha **última atualização** no topo de `privacy.html` e `terms.html`.
